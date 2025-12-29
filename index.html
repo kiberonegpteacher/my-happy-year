@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новый 2026 Год · Элегантное поздравление</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --elegant-black: #0c0c0c;
+            --elegant-white: #ffffff;
+            --elegant-gold: #c5a467;
+            --elegant-light-gray: #f5f5f5;
+            --elegant-dark-gray: #2a2a2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--elegant-white);
+            color: var(--elegant-black);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(197, 164, 103, 0.03) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(197, 164, 103, 0.03) 0%, transparent 20%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            background: linear-gradient(135deg, var(--elegant-white) 0%, #f8f8f8 100%);
+            border-bottom: 1px solid rgba(12, 12, 12, 0.05);
+        }
+
+        .logo {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--elegant-black);
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: var(--elegant-gold);
+        }
+
+        .main-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5.5rem;
+            font-weight: 600;
+            color: var(--elegant-black);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .main-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: var(--elegant-gold);
+        }
+
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: var(--elegant-dark-gray);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            letter-spacing: 1px;
+        }
+
+        .countdown-section {
+            background-color: var(--elegant-black);
+            color: var(--elegant-white);
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 500;
+            color: var(--elegant-white);
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 1px;
+            background: var(--elegant-gold);
+        }
+
+        .clock {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .time-block {
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .time-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4.2rem;
+            font-weight: 300;
+            color: var(--elegant-gold);
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        .time-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--elegant-light-gray);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .wishes-section {
+            padding: 6rem 0;
+            background-color: var(--elegant-white);
+            border-bottom: 1px solid rgba(12, 12, 12, 0.05);
+        }
+
+        .wishes-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .wishes-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.2rem;
+            font-weight: 500;
+            color: var(--elegant-black);
+            margin-bottom: 2.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .wishes-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 1px;
+            background: var(--elegant-gold);
+        }
+
+        .wishes-content {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--elegant-dark-gray);
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .wishes-content p {
+            margin-bottom: 1.2rem;
+            position: relative;
+        }
+
+        .wishes-content p::before {
+            content: '•';
+            position: absolute;
+            left: -15px;
+            color: var(--elegant-gold);
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: var(--elegant-gold);
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        /* Новая секция для галереи */
+        .gallery-section {
+            padding: 6rem 0;
+            background-color: #fafafa;
+            border-bottom: 1px solid rgba(12, 12, 12, 0.05);
+        }
+
+        .gallery-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.2rem;
+            font-weight: 500;
+            color: var(--elegant-black);
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .gallery-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 1px;
+            background: var(--elegant-gold);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            position: relative;
+            height: 300px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(197, 164, 103, 0.1);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            border-color: var(--elegant-gold);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(12, 12, 12, 0.7);
+            color: white;
+            padding: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 300;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .celebration-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--elegant-black) 0%, #0a0a0a 100%);
+            color: var(--elegant-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .celebration-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4.5rem;
+            font-weight: 600;
+            color: var(--elegant-gold);
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .celebration-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--elegant-light-gray);
+            max-width: 600px;
+            margin: 0 auto;
+            letter-spacing: 1px;
+        }
+
+        .fireworks-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+            display: none;
+        }
+
+        .firework {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            animation: firework-explosion 1.5s ease-out forwards;
+        }
+
+        @keyframes firework-explosion {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            70% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        .confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 99;
+            display: none;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 8px;
+            height: 15px;
+            opacity: 0.9;
+            animation: confetti-fall 6s ease-in-out forwards;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        .celebration-text {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--elegant-gold);
+            text-shadow: 0 0 20px rgba(197, 164, 103, 0.3);
+            z-index: 200;
+            opacity: 0;
+            pointer-events: none;
+            text-align: center;
+            max-width: 90%;
+            white-space: nowrap;
+        }
+
+        .footer {
+            background-color: var(--elegant-black);
+            color: var(--elegant-light-gray);
+            padding: 3rem 0;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        .footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .signature {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: var(--elegant-gold);
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 4rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .time-number {
+                font-size: 3.5rem;
+            }
+            
+            .wishes-title, .gallery-title {
+                font-size: 2.5rem;
+            }
+            
+            .celebration-title {
+                font-size: 3.5rem;
+            }
+            
+            .clock {
+                gap: 1rem;
+            }
+            
+            .time-block {
+                min-width: 120px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+            
+            .gallery-item {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 3rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .time-number {
+                font-size: 2.8rem;
+            }
+            
+            .section-title, .wishes-title, .gallery-title {
+                font-size: 2rem;
+            }
+            
+            .celebration-title {
+                font-size: 2.8rem;
+            }
+            
+            .clock {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .time-block {
+                min-width: 100px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-item {
+                height: 200px;
+            }
+            
+            .celebration-text {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">НОВЫЙ <span>2026</span></div>
+    
+    <section class="header">
+        <h1 class="main-title">2026</h1>
+        <p class="subtitle">Год, который изменит всё к лучшему — с любовью к моей семье</p>
+    </section>
+
+    <section class="countdown-section">
+        <div class="container">
+            <h2 class="section-title">Обратный отсчет</h2>
+            <div class="clock" id="clock">
+                <div class="time-block">
+                    <div class="time-number" id="days">00</div>
+                    <div class="time-label">Дней</div>
+                </div>
+                <div class="time-block">
+                    <div class="time-number" id="hours">00</div>
+                    <div class="time-label">Часов</div>
+                </div>
+                <div class="time-block">
+                    <div class="time-number" id="minutes">00</div>
+                    <div class="time-label">Минут</div>
+                </div>
+                <div class="time-block">
+                    <div class="time-number" id="seconds">00</div>
+                    <div class="time-label">Секунд</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wishes-section">
+        <div class="container">
+            <div class="wishes-container">
+                <h2 class="wishes-title">Теплые пожелания моим дорогим родственникам</h2>
+                <div class="wishes-content">
+                    <p>Дорогие мои родные! В этот волшебный новогодний вечер я хочу пожелать вам всего самого светлого и доброго!</p>
+                    <p>Пусть <span class="highlight">2026 год</span> станет для вас годом исполнения самых заветных желаний, годом здоровья, любви и гармонии в душе.</p>
+                    <p>Желаю вам <span class="highlight">крепкого здоровья</span>, неиссякаемой энергии и бодрости духа. Пусть каждый новый день приносит вам только радость и поводы для улыбок.</p>
+                    <p>Пусть в ваших домах всегда царят <span class="highlight">тепло, уют и взаимопонимание</span>. Пусть любовь и поддержка близких согревают вас в любую погоду.</p>
+                    <p><span class="highlight">Удачи во всех начинаниях</span>! Пусть ваши планы реализуются легко и быстро, а на пути встречаются только верные друзья и надежные спутники.</p>
+                    <p>Желаю вам <span class="highlight">финансового благополучия</span>, стабильности и уверенности в завтрашнем дне. Пусть достаток и процветание станут вашими верными спутниками.</p>
+                    <p>И самое главное — пусть в ваших сердцах всегда живет <span class="highlight">надежда, вера и любовь</span>. Пусть вы никогда не теряете способности удивляться чудесам и находить радость в мелочах.</p>
+                    <p>Пусть наши встречи будут частыми, разговоры — искренними, а воспоминания — самыми теплыми. Я благодарен(а) судьбе за то, что у меня есть такая замечательная семья.</p>
+                    <p>С Новым годом, мои дорогие! Пусть 2026 год станет для всех нас по-настоящему счастливым и запоминающимся!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Новая секция галереи -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="gallery-title">Наши самые прекрасные моменты</h2>
+            <div class="gallery-grid">
+                <!-- Здесь будут ваши фотографии из Pinterest -->
+                <div class="gallery-item">
+                    <img src="https://i.pinimg.com/736x/fd/1c/d0/fd1cd0223587b9294e7b8b2c8f54246e.jpg" alt="Новогоднее празднование">
+                    <div class="gallery-caption">Волшебство зимних праздников</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1974&auto=format&fit=crop" alt="Семейное застолье">
+                    <div class="gallery-caption">Теплые семейные вечера</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1516214104707-8ac5ad58734b?q=80&w=2010&auto=format&fit=crop" alt="Новогодняя елка">
+                    <div class="gallery-caption">Новогодняя магия</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1544818568-2d1bb27b7674?q=80&w=1822&auto=format&fit=crop" alt="Фейерверки">
+                    <div class="gallery-caption">Полночные фейерверки</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1525342607543-2e4ce04cc73c?q=80&w=1974&auto=format&fit=crop" alt="Зимний пейзаж">
+                    <div class="gallery-caption">Зимние пейзажи</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1560180474-4e9cc0de27a0?q=80&w=1974&auto=format&fit=crop" alt="Семейная прогулка">
+                    <div class="gallery-caption">Совместные прогулки</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07?q=80&w=1974&auto=format&fit=crop" alt="Чай с пирогами">
+                    <div class="gallery-caption">Уютные посиделки</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1521251571106-254c366c7c95?q=80&w=1999&auto=format&fit=crop" alt="Подарки">
+                    <div class="gallery-caption">Новогодние подарки</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="celebration-section">
+        <h2 class="celebration-title">Полночь</h2>
+        <p class="celebration-subtitle">Магический момент, когда сбываются самые заветные желания</p>
+    </section>
+
+    <div class="fireworks-container" id="fireworksContainer"></div>
+    <div class="confetti-container" id="confettiContainer"></div>
+    <div class="celebration-text" id="celebrationText">С НОВЫМ 2026 ГОДОМ! ✨</div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Создано с любовью для самой лучшей семьи на свете</p>
+            <p>29 декабря 2025 года</p>
+            <p class="signature">С любовью, ваш(а) [Ваше имя]</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set New Year date for 2026
+            const newYearDate = new Date('January 1, 2026 00:00:00').getTime();
+            
+            // Update countdown every second
+            const countdownInterval = setInterval(updateCountdown, 1000);
+            
+            // Check if New Year has already arrived
+            checkNewYearStatus();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = newYearDate - now;
+                
+                // Calculate days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                // Update the elements
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                
+                // Check if New Year has arrived
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    document.querySelector('.time-number').textContent = '00';
+                    document.querySelector('.section-title').textContent = 'Наступил Новый год!';
+                    startCelebration();
+                }
+            }
+
+            function checkNewYearStatus() {
+                const now = new Date().getTime();
+                if (now >= newYearDate) {
+                    clearInterval(countdownInterval);
+                    document.querySelector('.time-number').textContent = '00';
+                    document.querySelector('.section-title').textContent = 'Наступил Новый год!';
+                    startCelebration();
+                }
+            }
+
+            function startCelebration() {
+                // Show celebration text
+                const celebrationText = document.getElementById('celebrationText');
+                celebrationText.style.opacity = '1';
+                
+                // Start fireworks and confetti
+                setTimeout(() => {
+                    document.getElementById('fireworksContainer').style.display = 'block';
+                    document.getElementById('confettiContainer').style.display = 'block';
+                    
+                    // Create fireworks
+                    for (let i = 0; i < 25; i++) {
+                        setTimeout(createFirework, i * 250);
+                    }
+                    
+                    // Create confetti
+                    for (let i = 0; i < 120; i++) {
+                        setTimeout(createConfetti, i * 40);
+                    }
+                    
+                    // Repeat effects
+                    setInterval(createPeriodicCelebration, 2500);
+                }, 1000);
+            }
+
+            function createFirework() {
+                const container = document.getElementById('fireworksContainer');
+                const firework = document.createElement('div');
+                firework.className = 'firework';
+                
+                // Random position
+                const x = Math.random() * 100;
+                const y = Math.random() * 70 + 15; // Avoid top edge
+                
+                firework.style.left = `${x}%`;
+                firework.style.top = `${y}%`;
+                
+                // Elegant color palette
+                const colors = ['#c5a467', '#ffffff', '#e6e6e6', '#d4af37', '#b8860b'];
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                firework.style.backgroundColor = color;
+                firework.style.boxShadow = `0 0 8px ${color}, 0 0 15px ${color}`;
+                
+                // Random size
+                const size = Math.random() * 6 + 3;
+                firework.style.width = `${size}px`;
+                firework.style.height = `${size}px`;
+                
+                container.appendChild(firework);
+                
+                // Remove after animation
+                setTimeout(() => {
+                    firework.remove();
+                }, 1500);
+            }
+
+            function createConfetti() {
+                const container = document.getElementById('confettiContainer');
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                
+                // Random X position
+                const x = Math.random() * 100;
+                confetti.style.left = `${x}%`;
+                
+                // Elegant colors
+                const colors = ['#c5a467', '#0c0c0c', '#ffffff', '#d4af37', '#e6e6e6'];
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.backgroundColor = color;
+                
+                // Random rotation
+                const rotation = Math.random() * 360;
+                confetti.style.transform = `rotate(${rotation}deg)`;
+                
+                // Random animation delay
+                const delay = Math.random() * 5;
+                confetti.style.animationDelay = `${delay}s`;
+                
+                container.appendChild(confetti);
+                
+                // Remove after animation
+                setTimeout(() => {
+                    confetti.remove();
+                }, 6000);
+            }
+
+            function createPeriodicCelebration() {
+                // Create additional fireworks
+                for (let i = 0; i < 6; i++) {
+                    setTimeout(createFirework, i * 150);
+                }
+                
+                // Create additional confetti
+                for (let i = 0; i < 25; i++) {
+                    setTimeout(createConfetti, i * 80);
+                }
+            }
+
+            // Добавляем инструкции для пользователя
+            console.log('ИНСТРУКЦИЯ ПО ЗАМЕНЕ ФОТОГРАФИЙ:');
+            console.log('1. Найдите красивые фото на Pinterest');
+            console.log('2. Скопируйте прямые ссылки на изображения (URL)');
+            console.log('3. Замените ссылки в атрибутах src тегов <img>');
+            console.log('4. Измените подписи в .gallery-caption по желанию');
+            console.log('5. Для добавления новых фото - скопируйте блок .gallery-item и вставьте его');
+        });
+    </script>
+</body>
+</html>
